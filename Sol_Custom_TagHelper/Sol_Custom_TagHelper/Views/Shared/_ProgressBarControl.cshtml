@@ -1,0 +1,16 @@
+﻿@using System.Text
+
+@model Sol_Custom_TagHelper.Models.ProgressBarModel
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+
+    string progressBarWidth = new StringBuilder().Append("width: ").Append(Model.ProgressBarValue).Append("%").ToString();
+
+}
+
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="@Model.ProgressBarValue" aria-valuemin="@Model.ProgressBarMin" aria-valuemax="@Model.ProgressBarMax" style="@progressBarWidth"></div>
+    </div>
